@@ -9,7 +9,12 @@ function addErrorClassToAllInputs() {
     addErrorClass ("address")    ;
 }
 
-addErrorClassToAllInputs();
+//window.setTimeout(addErrorClassToAllInputs, 5000);
+
+var sendButton = document.getElementById('send-button');
+sendButton.addEventListener('click' , addErrorClassToAllInputs);
+
+
 // var tratratra;
 // var blablabla;
 // blablabla='input';
