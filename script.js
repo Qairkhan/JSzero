@@ -12,11 +12,18 @@ function addErrorClassToAllInputs() {
 //window.setTimeout(addErrorClassToAllInputs, 5000);
 
 var sendButton = document.getElementById('send-button');
-sendButton.addEventListener('click' , addErrorClassToLastName);
+sendButton.addEventListener('click' , onSendButtonClick);
 
-function addErrorClassToLastName() {
+function  onSendButtonClick() {
     addErrorClass('last-name');
 }
+
+function  onFirstNameKeyup() {
+    addErrorClass('first-name');
+} 
+
+var firstNameEl = document.getElementById('first-name');
+firstNameEl.addEventListener('keyup', onFirstNameKeyup);
 
 
 // var tratratra;
