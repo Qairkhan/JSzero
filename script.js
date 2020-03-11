@@ -12,7 +12,11 @@ function addErrorClassToAllInputs() {
 //window.setTimeout(addErrorClassToAllInputs, 5000);
 
 var sendButton = document.getElementById('send-button');
-sendButton.addEventListener('click' , addErrorClassToAllInputs);
+sendButton.addEventListener('click' , addErrorClassToLastName);
+
+function addErrorClassToLastName() {
+    addErrorClass('last-name');
+}
 
 
 // var tratratra;
