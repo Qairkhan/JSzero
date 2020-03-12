@@ -5,52 +5,35 @@ var buttonDel = document.getElementById('buttonDel');
 var input1 = document.getElementById('number1');
 var input2 = document.getElementById('number2');
 
-function getNumber1() {
-    return Number (input1.value);
-    
-}
-function getNumber2() {
-    return Number (input2.value);
-    
-}
+
 
 function makeOperation(OperationCode) {
+    var number1 = Number (input1.value);
+    var number2 = Number (input2.value);
     if (OperationCode === '+') {
-        var summ = getNumber1() + getNumber2();
+        var summ = number1 + number2;
     } else  if (OperationCode === '-') {
-        var summ = getNumber1() - getNumber2();
+        var summ = number1 - number2;
     } else if (OperationCode === '*') {
-        var summ = getNumber1() * getNumber2();
+        var summ = number1 * number2;
 
     } else if (OperationCode === '/') {
-        var summ = getNumber1() / getNumber2();
+        var summ = number1 / number2;
 
     } else {
         window.alert('HZ');
     }
     window.alert(summ);
 }
-function onButtonPlusClick() {
-   
-    makeOperation('+');
+
+
+function onOperationButtonClick(eventObject) {
+    var clickedElement = eventObject.currentTarget;
+    var operation = clickedElement.innerHTML;
+    makeOperation(operation)
 }
 
-function onButtonMinusClick() {
-   
-    makeOperation('-');
-}
-
-function onButtonMultiClick() {
-  
-    makeOperation('*');
-}
-
-function onButtonDelClick() {
-  
-    makeOperation('/');
-}
-
-buttonPlus.addEventListener('click', onButtonPlusClick);
-buttonMinus.addEventListener('click', onButtonMinusClick);
-buttonMulti.addEventListener('click', onButtonMultiClick);
-buttonDel.addEventListener('click', onButtonDelClick);
+buttonPlus.addEventListener('click', onOperationButtonClick);
+buttonMinus.addEventListener('click', onOperationButtonClick);
+buttonMulti.addEventListener('click', onOperationButtonClick);
+buttonDel.addEventListener('click', onOperationButtonClick);
