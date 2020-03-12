@@ -26,9 +26,7 @@ function onButtonPlusClick() {
 }
 
 function onButtonMinusClick() {
-    var input1 = document.getElementById('number1');
-    var input2 = document.getElementById('number2');
-
+   
     var number1 = Number (input1.value);
     var number2 = Number (input2.value);
 
@@ -37,9 +35,7 @@ function onButtonMinusClick() {
 }
 
 function onButtonMultiClick() {
-    var input1 = document.getElementById('number1');
-    var input2 = document.getElementById('number2');
-
+    
     var number1 = Number (input1.value);
     var number2 = Number (input2.value);
 
@@ -48,9 +44,7 @@ function onButtonMultiClick() {
 }
 
 function onButtonDelClick() {
-    var input1 = document.getElementById('number1');
-    var input2 = document.getElementById('number2');
-
+  
     var number1 = Number (input1.value);
     var number2 = Number (input2.value);
 
