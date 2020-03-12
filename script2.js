@@ -14,42 +14,40 @@ function getNumber2() {
     
 }
 
+function makeOperation(OperationCode) {
+    if (OperationCode === '+') {
+        var summ = getNumber1() + getNumber2();
+    } else  if (OperationCode === '-') {
+        var summ = getNumber1() - getNumber2();
+    } else if (OperationCode === '*') {
+        var summ = getNumber1() * getNumber2();
 
+    } else if (OperationCode === '/') {
+        var summ = getNumber1() / getNumber2();
+
+    } else {
+        window.alert('HZ');
+    }
+    window.alert(summ);
+}
 function onButtonPlusClick() {
    
-
-    var number1 = getNumber1();
-    var number2 = getNumber2();
-
-    var summ = number1 + number2;
-    window.alert(summ);
+    makeOperation('+');
 }
 
 function onButtonMinusClick() {
    
-    var number1 = Number (input1.value);
-    var number2 = Number (input2.value);
-
-    var summ = number1 - number2;
-    window.alert(summ);
+    makeOperation('-');
 }
 
 function onButtonMultiClick() {
-    
-    var number1 = Number (input1.value);
-    var number2 = Number (input2.value);
-
-    var summ = number1 * number2;
-    window.alert(summ);
+  
+    makeOperation('*');
 }
 
 function onButtonDelClick() {
   
-    var number1 = Number (input1.value);
-    var number2 = Number (input2.value);
-
-    var summ = number1 / number2;
-    window.alert(summ);
+    makeOperation('/');
 }
 
 buttonPlus.addEventListener('click', onButtonPlusClick);
