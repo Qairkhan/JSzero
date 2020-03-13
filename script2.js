@@ -33,7 +33,20 @@ function onOperationButtonClick(eventObject) {
     makeOperation(operation)
 }
 
-buttonPlus.addEventListener('click', onOperationButtonClick);
-buttonMinus.addEventListener('click', onOperationButtonClick);
-buttonMulti.addEventListener('click', onOperationButtonClick);
-buttonDel.addEventListener('click', onOperationButtonClick);
+
+
+var operationButton = [buttonPlus, buttonMinus, buttonMulti, buttonDel] ;
+
+// addComandEventListener(0);
+// addComandEventListener(1);
+// addComandEventListener(2);
+// addComandEventListener(3);
+
+
+
+for (var i = 0; i < operationButton.length; i++) {
+    var button = operationButton[i];
+    button.addEventListener('click', onOperationButtonClick);
+}
+
+
