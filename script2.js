@@ -1,7 +1,12 @@
-var buttonPlus = document.getElementById('buttonPlus');
-var buttonMinus = document.getElementById('buttonMinus');
-var buttonMulti = document.getElementById('buttonMulti');
-var buttonDel = document.getElementById('buttonDel');
+// var buttonPlus = document.getElementById('buttonPlus');
+// var buttonMinus = document.getElementById('buttonMinus');
+// var buttonMulti = document.getElementById('buttonMulti');
+// var buttonDel = document.getElementById('buttonDel');
+
+// var operationButton = [buttonPlus, buttonMinus, buttonMulti, buttonDel] ;
+
+var operationButton = document.getElementsByClassName('operation-button');
+
 var input1 = document.getElementById('number1');
 var input2 = document.getElementById('number2');
 
@@ -35,7 +40,6 @@ function onOperationButtonClick(eventObject) {
 
 
 
-var operationButton = [buttonPlus, buttonMinus, buttonMulti, buttonDel] ;
 
 // addComandEventListener(0);
 // addComandEventListener(1);
