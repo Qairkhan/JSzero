@@ -1,3 +1,8 @@
+//kpop object
+kpop.start();
+
+
+
 //find elements
 var showPrevBtn = document.getElementById('show-prev-btn');
 var showNextBtn = document.getElementById('show-next-btn');
