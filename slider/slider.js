@@ -6,9 +6,15 @@ var slider1 = {
     slideImage: document.getElementById('slide-img'),
 
     start: function() {
-    //addlistiner
-    this.showPrevBtn.addEventListener('click', this.onShowPrevBtnClick);
-    this.showNextBtn.addEventListener('click', this.onShowNextBtnClick);
+        var that = this;
+    //addlistiner // zamykanie????
+    this.showPrevBtn.addEventListener('click', function(event){
+        that.onShowPrevBtnClick(e);
+    });
+    // zamykanie????
+    this.showNextBtn.addEventListener('click', function(event) {
+        that.onShowNextBtnClick
+    });
 
     // images arrays
     this.imagesUrls.push('https://muz-tv.ru/storage/pic/e/2/e289a15ed2db453e1ecbf87ad157e48e.jpg');
