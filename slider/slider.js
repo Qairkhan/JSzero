@@ -8,12 +8,12 @@ var slider1 = {
     start: function() {
         var that = this;
     //addlistiner // zamykanie????
-    this.showPrevBtn.addEventListener('click', function(event){
+    this.showPrevBtn.addEventListener('click', function(e) {
         that.onShowPrevBtnClick(e);
     });
     // zamykanie????
-    this.showNextBtn.addEventListener('click', function(event) {
-        that.onShowNextBtnClick
+    this.showNextBtn.addEventListener('click', function(e) {
+        that.onShowNextBtnClick(e);
     });
 
     // images arrays
@@ -28,9 +28,9 @@ var slider1 = {
     },
 
     // function definition
-    onShowPrevBtnClick: function (event) {
+    onShowPrevBtnClick: function (e) {
         this.currentImageIndex--;
-        this.slideImage.src = imagesUrls[currentImageIndex];
+        this.slideImage.src = this.imagesUrls[this.currentImageIndex];
         this.showNextBtn.disabled = false;
 
         // disable prev btn
@@ -38,7 +38,7 @@ var slider1 = {
             this.showPrevBtn.disabled = true;
         }
     },
-    onShowNextBtnClick: function (event) {
+    onShowNextBtnClick: function (e) {
         this.currentImageIndex++;
         
         this.slideImage.src = this.imagesUrls[this.currentImageIndex];
