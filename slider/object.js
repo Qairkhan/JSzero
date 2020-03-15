@@ -1,15 +1,21 @@
-var kpop = {
-    name: 'black-pink',
-    isTurnOn: false,
-    speed: 120,
-    howmany: {
-        col: 6,
-        average: 25
-    },
-    start: function() {
+function kpop(name) {
+    this.name = name;
+    this.isTurnOn = false;
+    this.speed = 120;
+    this.howmany = {
+        koll: 6,
+        average: 25,
+        isTurnOn: folse
+    };
+
+    this.start = function() {
         this.isTurnOn = true;
         this.speed = 150;
         this.howmany.col = 10;
         this.howmany.average = 26;
     }
 };
+var reno = new kpop('reno');
+reno.start();
+var mrs = new Car ('Mers');
+mers.start();
