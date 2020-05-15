@@ -10,8 +10,8 @@ function kpop(name) {
 
     this.start = function() {
         this.isTurnOn = true;
-        this.speed = 150;
-        this.howmany.col = 10;
+        this.speed = 140;
+        this.howmany.col = 20;
         this.howmany.average = 26;
     }
 };
